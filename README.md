@@ -52,9 +52,9 @@ In this tutorial, we will walk through the steps of setting up the container bac
 
 # High-Level Architecture Diagram:
 
-![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/figure%201.png)
+![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/8abcf9f9ba15eacbfdd502d65ab46e448effc1a0/images/figure%201.png)
 
-![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/figure%202.png)
+![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/Figure%202.png)
 
 # Installation Steps:
 1.  **Setup 3 Node ROKS Cluster**
@@ -65,11 +65,11 @@ In this tutorial, we will walk through the steps of setting up the container bac
 
     Click – **Create Cluster**
 
-    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/figure%203.png)
+    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/Figure%203.png)
 
     Select **Manual Setup** > **VPC** > Choose Your **VPC** from dropdown > Choose **Object Storage instance** from Drop Down
 
-    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/figure%204.png)
+    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/Figure%204.png)
 
     Select OpenShift Version **4.10.36**
 
@@ -79,18 +79,18 @@ In this tutorial, we will walk through the steps of setting up the container bac
 
     Select **Worker Zones (One Zone is sufficient for POC & test environment)**
 
-    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/figure%205.png)
+    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/Figure%205.png)
 
     Click on **Change flavor** from **Worker pool** and select **16 vCPU 64GB RAM** instance **(bx2.16x64)**, 
     **RHEL 8** Operating System
 
-    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/figure%206.png)
+    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/Figure%206.png)
 
     Type meaningful **Cluster name** and **Tag**
 
     click **Create**
 
-    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/figure%207.png)
+    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/Figure%207.png)
 
 2.  **Install OpenShift Data Foundation on ROKS Cluster**
    
@@ -99,7 +99,7 @@ In this tutorial, we will walk through the steps of setting up the container bac
     Open ROKS Cluster that you had created in previous steps
     Click **Install** button from **OpenShift Data Foundation** . This will create the ODF
 
-    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/figure%208.png)
+    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/Figure%208.png)
 
     Enter total disk storage requirement size in **“OSD pod size (Gi)”** and click **Install**
 
@@ -107,7 +107,7 @@ In this tutorial, we will walk through the steps of setting up the container bac
 
     This will provision the additional disks to OCP cluster nodes in IBM Cloud and that will be converted in to ODF Storage pool which can be consumed by the POD/Container by Persistent Volume claim.
 
-    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/figure%209.png)
+    ![alt text](https://github.com/mdhamat/IBM-Spectrum-fusion/blob/00b9b706b92cfa8fa564eb4b4ca824ad713d9987/images/Figure%209.png)
 
     Verify OpenShift Data Foundation has installed successfully by login into **OpenShift Console** > Navigate to **Storage** > **Data Foundation** should visible underneath now & its status should be Green
 
