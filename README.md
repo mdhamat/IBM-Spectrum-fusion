@@ -526,9 +526,8 @@ In this tutorial, we will walk through the steps of setting up the container bac
 
             ```
             oc annotate pod -n demoapps -l name=postgresql \
-            pre.hook.backup.velero.io/command='["/bin/bash", “-c”, “psql -c "select pg_start_backup('app_cons');"”]' \
-            pre.hook.backup.velero.io/container=postgresql \
-            post.hook.backup.velero.io/command='["/bin/bash", “-c”, “psql -c "select pg_stop_backup();"”]' \
+            pre.hook.backup.velero.io/command='["/bin/bash", "-c", 'psql  -c "\"select pg_start_backup('app_cons');\""']' \ pre.hook.backup.velero.io/container=postgresql \
+            post.hook.backup.velero.io/command='["/bin/bash", "-c", 'psql -c "\"select pg_stop_backup( );\"""]'\ 
             post.hook.backup.velero.io/container=postgresql
 
             ```
